@@ -1,0 +1,27 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group 'org.sharedisbursement'
+version '1.0.0'
+
+repositories {
+    //mavenCentral()
+    mavenLocal()
+
+}
+
+dependencies {
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.sharedisbursement'
+            artifactId = 'share-disbursement-dto'
+            version = '1.0.0'
+            from components.java
+        }
+    }
+}
